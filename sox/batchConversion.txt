@@ -1,0 +1,11 @@
+#Batch convert .wav to .mp3 whilst sampling at 48k with SoX
+
+
+`mkdir mp3`
+
+// or any other folder name you wish to use
+
+`for i in *.wav; do     sox -r 48k "$i" mp3/"$(basename -s .wav "$i").mp3"; done`
+
+// will batch convert all .wav files to .mp3 whilst keeping the original filename, and dumps it into the mp3 (or other named) folder
+   Thanks to Martin Parker for helping create this script [TinPark](http://www.tinpark.com)
